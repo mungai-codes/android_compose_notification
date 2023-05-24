@@ -45,9 +45,8 @@ object NotificationModule {
     @Provides
     @Singleton
     fun providesNotificationService(
-        manager: NotificationManager,
         builder: NotificationCompat.Builder
     ): NotificationService {
-        return NotificationServiceImpl(manager = manager, builder = builder)
+        return NotificationServiceImpl(builder = builder)
     }
 }
